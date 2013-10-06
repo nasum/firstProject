@@ -1,7 +1,20 @@
-@(message: String)
-
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message, style = "Java")
-    
-}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PrivateSpace</title>
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/forms.css")">
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/buttons.css")">
+    	<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    	<script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1>PrivateSpace</h1>
+		<p>ここはプライベートな情報を保存する閉鎖的なサービスです</p>
+		<h2>Sign in</h2>
+		<form method="post" action="/signin" class="pure-form">
+			<input class="pure-input-1-2" type="text" name="id" placeholder="id">
+			<input class="pure-input-1-2" type="email" name="email" placeholder="email">
+			<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">submit</button>
+		</form>
+	</body>
+</html>
